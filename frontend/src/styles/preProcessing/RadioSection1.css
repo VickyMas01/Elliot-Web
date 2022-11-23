@@ -1,0 +1,164 @@
+/* inizio stile slider */
+
+.slider_container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    margin-top: 4%;
+    margin-left: 17%;
+    margin-bottom: 4%;
+}
+.slider {
+    display: inline-block;
+    height: 17px;
+    position: relative;
+    width: 30px;
+  }
+  .slider input {
+    display:none;
+  }
+  .switch {
+    background-color: rgb(0, 179, 255);
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: .4s;
+  }
+  .switch:before {
+    background-color: #fff;
+    bottom: 2px;
+    content: "";
+    height: 13px;
+    left: 2px;
+    position: absolute;
+    transition: .4s;
+    width: 13px;
+  }
+  input:checked + .switch {
+    background-color: rgb(0, 179, 255);
+  }
+  input:checked + .switch:before {
+    transform: translateX(13px);
+  }
+  .switch.round {
+    border-radius: 34px;
+  }
+  .switch.round:before {
+    border-radius: 50%;
+  }
+
+
+  /* Fine stile slider */
+
+
+  .inputNo{
+    display: none;
+  }
+
+  .input1{
+    display: block;
+    position: relative;
+    left: 10%;
+    width: 75%;
+    margin-bottom: 4%;
+    border-width: 2px;
+    border-radius: 3px;
+    border-style: solid;
+    border-color: rgb(198, 198, 198);
+    font-weight: bold;
+    color:rgb(60, 70, 75) ;
+  }
+  .input1:invalid{
+    border-color: rgb(151, 4, 4);
+  }
+  .input2{
+    display: block;
+  }
+  .input3{
+    display: block;
+  }
+  .input4{
+    display: block;
+    position: relative;
+    left: 10%;
+    width: 75%;
+    margin-bottom: 4%;
+    border-width: 2px;
+    border-radius: 3px;
+    border-style: solid;
+    border-color: rgb(198, 198, 198);
+    font-weight: bold;
+    color:rgb(60, 70, 75) ;
+  }
+  .input4:invalid{
+    border-color: rgb(151, 4, 4);
+  }
+  #single{
+    margin-top:5%;
+  }
+
+
+  .radioWrapper{
+    margin-top: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    animation: fadeIn 1s;
+ }
+ 
+ .radioEl{
+     margin-top: 8%;
+     margin-left: 10%;
+     padding: 0%;
+     width: 20%;
+     height: 20%;
+     border-style: solid;
+     border-color: rgb(198, 198, 198);
+     border-width: 4px;
+     border-radius: 5px;
+     transition: all 0.5s;
+ }
+ .radioEl:hover{
+     box-shadow: rgb(84, 85, 85) 0 0.5px 15px;
+     transition: all 0.5s;
+ }
+
+ .form-radio-input{
+  position: relative;
+  left: 90%;
+  top: -50px;
+ }
+ input[type=radio]:indeterminate{
+  border-color: rgb(151, 4, 4);
+ }
+ .form-radio-input:hover{
+  cursor: pointer;
+ }
+ .form-control{
+    position: relative;
+    left: 10%;
+    width: 75%;
+    margin-bottom: 4%;
+    border-width: 2px;
+    border-radius: 3px;
+    border-style: solid;
+    border-color: rgb(198, 198, 198);
+    font-weight: bold;
+    color:rgb(60, 70, 75) ;
+ }
+ .form-control:invalid{
+    border-color: rgb(151, 4, 4);
+ }
+
+ .inputNo{
+  display: none;
+ }
+
+ @keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}

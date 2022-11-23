@@ -1,0 +1,240 @@
+.formContainer{
+    margin-top: 30px;
+    /* background-color: blueviolet; */
+    height: 100%;
+    width:70%;
+    height: auto;
+    display: flex;
+    justify-content:center;
+    align-items:flex-start;
+}
+
+
+
+.intro_vis{
+    width:89%;
+    height:50%;
+    margin-top: 10px;
+    border-radius: 15px;
+    border-style: solid;
+    border-width:4px;
+    border-color: grey;
+    position: relative;
+    animation: fadeIn 1.5s;
+}
+
+.intro_no{
+    display: none;
+}
+
+.introTit{
+    width: 50%;
+    position: relative;
+    left: 25%;
+    text-align: center;
+    margin-top: 50px;
+    font-size: 50px;
+    color: rgb(0, 179, 255);
+
+}
+
+.introDescr{
+    text-align: center;
+    width: 70%;
+    max-height: 114.29px;
+    position: absolute;
+    left: 15%;
+    font-size: 20px;
+    color:rgb(60, 70, 75);
+}
+.start{
+    position: absolute;
+    width: 20%;
+    height: 10%;
+    border-style: none;
+    border-radius: 7px;
+    font-size: x-large;
+    color: white;
+    margin-top: 150px;
+    margin-left: 38%;
+    background-image: linear-gradient(92.88deg, #6cb2b6 9.16%, #4faab4 43.89%, #28a8b6 64.72%);
+    transition: all .5s;
+}
+.start:hover{
+    box-shadow: rgba(105, 165, 196, 0.5) 0 1px 30px;
+    transition-duration: .1s;
+    cursor:pointer;
+}
+
+.strat_vis{
+    background-color: white;
+    width:89%;
+    height:50%;
+    margin-top: 10px;
+    border-radius: 15px;
+    border-style: solid;
+    border-width:4px;
+    border-color: grey;
+    position: relative;
+    animation: fadeIn 1.5s;
+}
+.titleSt{
+    width: 50%;
+    position: absolute;
+    left: 25%;
+    text-align: center;
+    margin-top: 30px;
+    font-size: 50px;
+    color: rgb(0, 179, 255);
+
+}
+
+.strOpt{
+    width: 20%;
+    height: 10%;
+    border-style: solid;
+    border-width:3px;
+    border-color: grey;
+    border-radius: 7px;
+    font-size: x-large;
+    color: rgb(60, 70, 75);
+    margin-top: 180px;
+    
+}
+.strOpt_selected{
+    width: 20%;
+    height: 10%;
+    color:white;
+    border-style: none;
+    border-radius: 7px;
+    font-size: x-large;
+    background-image: linear-gradient(92.88deg, #6cb2b6 9.16%, #4faab4 43.89%, #28a8b6 64.72%);
+    box-shadow: rgba(105, 165, 196, 0.5) 0 1px 30px;
+    margin-top: 180px;
+}
+
+.strOpt:hover{
+    color:white;
+    border-style: none;
+    background-image: linear-gradient(92.88deg, #6cb2b6 9.16%, #4faab4 43.89%, #28a8b6 64.72%);
+    transition: all .5s;
+    box-shadow: rgba(105, 165, 196, 0.5) 0 1px 30px;
+
+    cursor:pointer;
+}
+#op1{
+    position: absolute;
+    left: 8%;
+}
+#op2{
+    position: absolute;
+    left: 40%;
+}
+#op3{
+    position: absolute;
+    right: 8%;
+}
+
+#error{
+    position: absolute;
+    top:65%;
+    left: 40%;
+    color:rgb(155, 28, 28);
+    font-size: larger;
+    font-weight: bold;
+}
+
+#goTo{
+    position: absolute;
+    top: 40%;
+    left:40%;
+    width: 20%;
+    height: 10%;
+    border-style: none;
+    border-radius: 7px;
+    font-size: x-large;
+    color: white;
+    margin-top: 180px;
+    background-image: linear-gradient(92.88deg, #6cb2b6 9.16%, #4faab4 43.89%, #28a8b6 64.72%);
+    transition: all .5s;
+}
+#goTo:hover{
+    box-shadow: rgba(105, 165, 196, 0.5) 0 1px 30px;
+    transition-duration: .1s;
+    cursor:pointer;
+}
+
+.strat_no{
+    display: none;
+}
+
+.main_vis{
+    /* background-color: brown; */
+    width:89%;
+    height:58%;
+    margin-top: 10px;
+    border-radius: 15px;
+    border-style: solid;
+    border-width:4px;
+    border-color: grey;
+    position: relative;
+    animation: fadeIn 1.5s;
+}
+.main_no{
+    display: none;
+}
+ #cngStr{
+    position: absolute;
+    top:88%;
+    left: 1%;
+    width: 10%;
+    height: 10%;
+    font-size: large;
+    font-weight: bolder;
+    border-radius: 13px;
+    border-style: solid;
+    border-width: 4px;
+    border-color: rgb(255, 204, 0);
+    color: rgb(255, 204, 0);
+ }
+ #cngStr:hover{
+    background-image: linear-gradient(92.88deg,rgb(249, 216, 82) 9.16%, rgb(250, 210, 49) 43.89%, rgb(255, 204, 0) 64.72%);
+    border-style: none;
+    box-shadow: rgb(181, 145, 0) 0 1px 30px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s;
+ }
+
+ 
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+  @media(max-width:1200px){
+    .formContainer{
+        width: 100%;
+    }
+    .start{
+        width: 30%;
+        margin-left: 33%;
+    }
+    .strOpt,.strOpt_selected{
+        width:22%;
+    }
+    #error{
+        left:32%
+    }
+  }
+
+  @media(max-width:1732px){
+    #cngStr{
+        width: 15%;
+        height: 8%;
+        top: 91%;
+        font-size: 11px;
+    }
+}
+  

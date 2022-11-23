@@ -1,0 +1,184 @@
+.optionWrapper{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 80px;
+}
+
+.optHidden{
+    display: none;
+}
+.optShow{
+    margin-left: 5%;
+}
+
+.titSect{
+    width: 28%;
+}
+.betaInput{
+    margin-left: 10px;
+}
+.betaInput:invalid{
+    border-color: rgb(186, 4, 4); ;
+}
+
+#complNovelty{
+    position: relative;
+    top:-8%
+}
+.metricTit{
+    position: relative;
+    left: 35%;
+    top: 20px;
+    bottom: 20px;
+    font-weight: bolder;
+    font-size: x-large;
+}
+
+
+#fairTit{
+    top:50px;
+    transition: all 0.5s;
+}
+.fairClosed{
+    position:relative;
+    top: -30px;
+    left: 88%;
+    width: 24px;
+    height: 24px;
+    align-content: center;
+    background-image: url('../../images/openFull.png');
+}
+.fairClosed:hover{
+    cursor: pointer;
+}
+.fairOpened{
+    position:relative;
+    left: 96%;
+    width: 24px;
+    height: 24px;
+    align-content: center;
+    background-image: url('../../images/closeFull.png');
+}
+.fairOpened:hover{
+    cursor: pointer;
+}
+
+.metricOption{
+    width: 27%;
+    height: 25%;
+    margin-left: 40px;
+    border-style: solid;
+    border-color: rgb(198, 198, 198);
+    border-width: 4px;
+    border-radius: 5px;
+    transition: all 0.5s;
+}
+.metricOptionOpened{
+    position: relative;
+    top: -220px;
+    left: 5%;
+    border-radius: 15px;
+    height: 82%;
+    width: 90%;
+    background-color: white;
+    box-shadow: rgb(50, 64, 70) 0 1px 30px;
+    transition: all 0.5s;
+}
+
+.fairOptShow{
+     display: flex;
+     flex-wrap: wrap;
+     width: 80%;
+     height: 80%;
+     position: relative;
+     top:-680px;
+     left:10%;
+}
+.fairOptHide{
+   display: none;
+}
+.clusterOpt{
+    width: 30%;
+    height:42%;
+    margin-left: 10px;
+    margin-right: 0;
+    border-style: solid;
+    border-color: rgb(198, 198, 198);
+    border-width: 4px;
+    border-radius: 5px;
+    font-size: large;
+    font-weight: bolder;
+}
+.clusterOpt2{
+    width: 30%;
+    height:24%;
+    margin-left: 10px;
+    border-style: solid;
+    border-color: rgb(198, 198, 198);
+    border-width: 4px;
+    border-radius: 5px;
+    font-size: large;
+    font-weight: bolder;
+}
+.cluName,
+.cluFile{
+    border-radius: 10px;
+    border-style: solid;
+    border-color: #6cb2b6;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.cluName:invalid{
+    border-color: rgb(186, 4, 4);
+}
+.cluFile:invalid{
+    border-color: rgb(186, 4, 4);
+}
+
+.clustCheck:hover{
+    cursor: pointer;
+}
+
+
+@media(max-width: 1545px){
+    .cluFile{width: 80%;}
+    .titSect{width: 45%;}
+}
+@media(max-width:1210px){
+    .clusterOpt{height:55%;}
+    .clusterOpt2{height:28%;}
+    .fairOptShow{overflow-y: scroll;}
+    .cluFile{
+        width:90%;
+    }
+    .cluName{
+        width: 90%;
+    }
+}
+
+@media(max-width:1000px){
+    #fairSection{margin-top: -45px;}
+    .optionWrapper{margin-left: 80px;}
+    .titSect{width: 70%;}
+    .metricOptionOpened{
+        top:-25%;
+        left: -7%;
+    }
+    .fairOptShow{
+        overflow-y: scroll;
+        margin-top:11%;
+        left: -7%;
+    }
+    .cluFile{
+        width:50%;
+        background-color: rgb(0, 179, 255) ;
+    }
+    .cluName{
+        width: 50%;
+    }
+    .clusterOpt{height:55%;margin-top: 15px;margin-left:60px;}
+    .clusterOpt2{height:26%;margin-top: 15px;margin-left:60px;}
+    #fairTit{margin-left:-20px;}
+}

@@ -1,0 +1,259 @@
+.showNo{
+    display: none;
+}
+
+.evFormContainer{
+    margin-top: 30px;
+    height: 100%;
+    width:70%;
+}
+
+.evPbar{
+    position: relative;
+    top:3%;
+    left:2% ;
+    width: 90%;
+}
+
+#evForm{
+    width:100%;
+    height:100%;
+}
+.evIntro,
+.evFileInput,
+.otherOptions,
+.cutoffContainer,
+.simpleContainer,
+.complexContainer{
+    width:89%;
+    height:50%;
+    margin-top: 10px;
+    border-radius: 15px;
+    border-style: solid;
+    border-width:4px;
+    border-color: grey;
+    position: relative;
+    animation: fadeIn 1.5s;
+}
+
+.introCont1{
+    width: 50%;
+    position: relative;
+    left: 25%;
+    text-align: center;
+    margin-top: 50px;
+    font-size: 50px;
+    color: rgb(0, 179, 255);
+}
+.introCont2{
+    text-align: center;
+    width: 70%;
+    max-height: 114.29px;
+    position: absolute;
+    left: 15%;
+    font-size: 30px;
+    color:rgb(60, 70, 75);
+}
+#evStart{
+    position: absolute;
+    width: 20%;
+    height: 10%;
+    border-style: none;
+    border-radius: 7px;
+    font-size: x-large;
+    color: white;
+    margin-top: 150px;
+    margin-left: 38%;
+    background-image: linear-gradient(92.88deg, #6cb2b6 9.16%, #4faab4 43.89%, #28a8b6 64.72%);
+    transition: all .5s;
+}
+#evStart:hover{
+    box-shadow: rgba(105, 165, 196, 0.5) 0 1px 30px;
+    transition-duration: .1s;
+    cursor:pointer;
+}
+
+.fileCard,
+.optContainer{
+    width: 40%;
+    height: 20%;
+    position: relative;
+    top: 50px;
+    left: 30%;
+    margin-top:10px;
+    border-style: solid;
+    border-color: rgb(198, 198, 198);
+    border-width: 4px;
+    border-radius: 5px;
+    animation: fadeIn 1s;
+}
+#checkOpt{
+    display: flex;
+    flex-direction: column;
+    justify-content:center ;
+}
+.ipoTest{
+    position: relative;
+    left: 41%;
+    font-size: large;
+    font-weight: bold;
+}
+.otherBox:hover{
+    cursor: pointer;
+}
+.fileTit,
+.optLabel{
+    text-align: center;
+    width: 60%;
+    position: relative;
+    font-size: 25px;
+    font-weight: bold;
+    top: 10px;
+    left: 44%;
+}
+.sendFile,.optInput{
+    width: 50%;
+    height: 20%;
+    position: relative;
+    top: 50px;
+    left: 13%;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: #6cb2b6;
+}
+#tresh_label{
+    left:27%;
+}
+#treshold{
+    left:-19% ;
+}
+
+#evNext{
+    position: absolute;
+    top:77%;
+    right: 23%;
+    width: 7%;
+    height: 7%;
+    font-size: large;
+    font-weight: bolder;
+    border-radius: 13px;
+    border-style: solid;
+    border-width: 4px;
+    border-color: rgb(0, 179, 255);
+    color: rgb(0, 179, 255);
+    transition: all .5s;
+}
+#evNext:hover{
+    background-image: linear-gradient(92.88deg, #6cb2b6 9.16%, #4faab4 43.89%, #28a8b6 64.72%);
+    color: white;
+    cursor: pointer;
+    border-style: none;
+    box-shadow: rgb(37, 118, 152) 0 1px 30px;
+}
+#evPrev{
+    position: absolute;
+    top:77%;
+    right: 31%;
+    width: 7%;
+    height: 7%;
+    font-size: large;
+    font-weight: bolder;
+    border-radius: 13px;
+    border-style: solid;
+    border-width: 4px;
+    border-color: rgb(0, 179, 255);
+    color: rgb(0, 179, 255);
+    transition: all .5s;
+}
+#evPrev:hover{
+    background-image: linear-gradient(92.88deg, #6cb2b6 9.16%, #4faab4 43.89%, #28a8b6 64.72%);
+    color: white;
+    cursor: pointer;
+    border-style: none;
+    box-shadow: rgb(37, 118, 152) 0 1px 30px;
+}
+#evReset{
+    position: absolute;
+    top:77%;
+    left: 16%;
+    width: 8%;
+    height: 7%;
+    font-size: 15px;
+    font-weight: bolder;
+    border-radius: 13px;
+    border-style: solid;
+    border-width: 4px;
+    border-color: rgb(169, 0, 0);
+    color: rgb(169, 0, 0);
+    transition: all .5s;
+}
+#evReset:hover{
+    background-image: linear-gradient(92.88deg, #b03333 9.16%, #b72828 43.89%, #8c0000 64.72%);
+    color: white;
+    cursor: pointer;
+    border-style: none;
+    box-shadow: rgb(154, 66, 66) 0 1px 30px;
+}
+
+#evFormSubmit{
+    position: absolute;
+    top:77%;
+    left: 40%;
+    width: 15%;
+    height: 7%;
+    font-size: large;
+    font-weight: bolder;
+    border-radius: 13px;
+    border-style: solid;
+    border-width: 4px;
+    border-color: rgb(13, 180, 44);
+    color: rgb(13, 180, 44);
+    transition: all .5s;
+}
+#evFormSubmit:hover{
+    background-image: linear-gradient(92.88deg, rgb(75, 188, 96) 9.16%, rgb(50, 181, 74) 43.89%, rgb(13, 180, 44) 64.72%);
+    color: white;
+    cursor: pointer;
+    border-style: none;
+    box-shadow: rgb(99, 218, 121) 0 1px 30px;
+}
+
+
+
+
+
+
+@media(max-width:1732px){
+    #evNext,#evPrev,#evReset,#evFormSubmit{
+        width: 6%;
+        height: 5%;
+        top: 79%;
+        font-size: 11px;
+        right: 15% ;
+    }
+    #evPrev{
+        right:21.5%
+    }
+    #evFormSubmit{width: 11%;left: 45%;}
+    .evIntro,
+    .evFileInput,
+    .otherOptions,
+    .cutoffContainer,
+    .simpleContainer,
+    .complexContainer{
+        width: 100%;
+    }
+
+    .fileCard{
+        width: 60%;
+        left: 20%;
+    }
+    #treshold{
+        left: 28%;
+        top:35px
+    }
+}
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }

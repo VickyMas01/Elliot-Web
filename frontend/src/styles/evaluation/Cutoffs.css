@@ -1,0 +1,98 @@
+.noEnable{
+    display: none;
+}
+
+.cutCheckLabel{
+    position: relative;
+    left: 40%;
+    top:50px;
+    font-size: xx-large;
+    font-weight: bolder;
+}
+#cutoffs{
+    position: relative;
+    top:50px;
+    left:42%;
+    height:5%;
+    width: 5%;
+}
+#cutoffs:hover{
+    cursor: pointer;
+}
+
+.enable{
+    margin-top: 50px;
+    margin-left: 15%;
+    width: 70%;
+    height: 80%;
+    overflow-y: auto;
+    animation: fadeIn 1s;
+}
+.nInput{
+    position: relative;
+    left:25% ;
+    width: 18%;
+    height: 8%;
+    margin-right:10px ;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: #6cb2b6;
+}
+.cutoffButton{
+    position: relative;
+    left: 25%;
+    margin-right: 10px;
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 10px;
+    font-weight: bolder;
+    width: 13%;
+    height: 8%;
+}
+#cutoffAdd{
+    border-color: rgb(17, 201, 17);
+    color: rgb(17, 201, 17);
+}
+#cutoffAdd:hover{
+    cursor:pointer;
+    background-color:rgb(17, 201, 17);
+    color: white;
+    border-style: none;
+}
+#cutoffAdd:disabled{
+    border-color:rgb(127, 128, 127);
+    color: rgb(127, 128, 127);
+}
+#cutoffReset{
+    border-color: rgb(201, 54, 17);
+    color: rgb(201, 54, 17);
+}
+#cutoffReset:hover{
+    cursor:pointer;
+    background-color:rgb(201, 54, 17);
+    color: white;
+    border-style: none;
+}
+
+.cutoffsEnabled{
+    position: relative;
+    left: 37%;
+    display: flex;
+    flex-direction: column;
+    height: 80;
+    width: 25%;
+    padding-top: 10px;
+}
+.c_value{
+    width: 100%;
+    height: 6%;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: #6cb2b6;
+    font-weight: bolder;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }

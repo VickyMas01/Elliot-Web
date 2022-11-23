@@ -1,0 +1,392 @@
+.datSet_container{
+    height: 100%;
+}
+
+.pbar{
+    position:absolute;
+    left: 2.5%;
+}
+
+.randSeed{
+    position:absolute;
+    top: 40%;
+    left: 3%;
+    width: 40%;
+    height: 25%;
+    border-style: solid;
+    border-color: rgb(198, 198, 198);
+    border-width: 4px;
+    border-radius: 5px;
+    animation: fadeIn 1s;
+
+}
+
+.randSeedTit{
+    position: relative;
+    margin-top: -7%;
+    margin-left: 3% ;
+    background-color: white;
+    width: 55%;
+    text-align: center;
+    font-size: 40px;
+    color: rgb(0, 179, 255);
+
+} 
+
+.randDescr{
+    position: relative;
+    margin-left: 22px;
+    font-weight: 20px;
+    color: rgb(60, 70, 75);
+}
+.randValue{
+    position: relative;
+    margin-left: 25%;
+    border-width: 2px;
+    border-radius: 3px;
+    border-style: solid;
+    border-color: rgb(198, 198, 198);
+    font-size: large;
+    font-weight: bold;
+    color:rgb(60, 70, 75) ;
+    text-align: center;
+}
+
+.binar{
+    position: absolute;
+    top: 40%;
+    right: 3%;
+    width: 40%;
+    height: 25%;
+    border-style: solid;
+    border-color: rgb(198, 198, 198);
+    border-width: 4px;
+    border-radius: 5px;
+    animation: fadeIn 1s;
+}
+
+.binarTit{
+    position: relative;
+    margin-top: -7%;
+    margin-left: 3%;
+    padding: 0px;
+    background-color: white;
+    width: 80%;
+    text-align: center;
+    font-size: 40px;
+    color: rgb(0, 179, 255);
+}
+
+.binLabel{
+    margin-left: 10%;
+    margin-top: 300px;
+    font-size: 20px;
+    font-weight: bolder;
+    color: rgb(60, 70, 75);
+}
+.binCheck{
+    position: absolute;
+    top: 58%;
+    left: 43%;
+    width: 15%;
+    height: 15%;
+
+}
+.binCheck:hover{
+    cursor: pointer;
+}
+
+.s2_vis{
+    animation: fadeIn 1s;
+    height: 100%;
+}
+
+.preFTitle,.testSpTitle,.valSTitle,.upTitle{
+    position: absolute;
+    top: -14.5%;
+    left: 3%;
+    margin-bottom: 0px;
+    width: 20%;
+    text-align: center;
+    font-size: 40px;
+    color: rgb(0, 179, 255);
+    background-color: white;
+}
+.upTitle{
+    width: 25%;
+
+}
+
+.valSTitle{
+    width: 30%;
+}
+
+.fiveWrapper{
+    height: 50%;
+    width: 60%;
+    position: absolute;
+    top: 15%;
+    left: 20% ;
+    border-style: solid;
+    border-color: rgb(198, 198, 198);
+    border-width: 4px;
+    border-radius: 5px;
+    animation: fadeIn 1s;
+}
+.upDescription{
+    text-align: center;
+    width: 60%;
+    position: relative;
+    font-size: 30px;
+    top: 30px;
+    left: 20%;
+} 
+#dataset_file{
+    width: 50%;
+    height: 10%;
+    position: relative;
+    top: 40px;
+    left: 25%;
+    border-radius: 10px;
+}
+input[type=file]::file-selector-button{
+    color: white;
+    font-weight: bold;
+    background-color:rgb(0, 179, 255) ;
+    border-style: none;
+    height: 100%;
+}
+input[type=file]::file-selector-button:hover{
+    cursor: pointer;
+}
+
+#disclaimer{
+    position: relative;
+    left: 35%;
+    width: 40%;
+    color: #8c0000;
+    font-weight: bolder;
+    top: 420px;
+}
+
+#dataset_submit{
+    position: absolute;
+    top:88%;
+    right: 36%;
+    width: 27%;
+    height: 10%;
+    font-size: large;
+    font-weight: bolder;
+    border-radius: 13px;
+    border-style: solid;
+    border-width: 4px;
+    border-color: rgb(13, 180, 44);
+    color: rgb(13, 180, 44);
+    transition: all .5s;
+}
+#dataset_submit:hover{
+    background-image: linear-gradient(92.88deg, rgb(75, 186, 96) 9.16%, rgb(48, 184, 73) 43.89%, rgb(2, 161, 31)64.72%);
+    color: white;
+    cursor: pointer;
+    border-style: none;
+    box-shadow: rgb(54, 118, 59) 0 1px 30px;
+}
+
+#next{
+    position: absolute;
+    top:88%;
+    right: 1%;
+    width: 10%;
+    height: 10%;
+    font-size: large;
+    font-weight: bolder;
+    border-radius: 13px;
+    border-style: solid;
+    border-width: 4px;
+    border-color: rgb(0, 179, 255);
+    color: rgb(0, 179, 255);
+    transition: all .5s;
+}
+#next:hover{
+    background-image: linear-gradient(92.88deg, #6cb2b6 9.16%, #4faab4 43.89%, #28a8b6 64.72%);
+    color: white;
+    cursor: pointer;
+    border-style: none;
+    box-shadow: rgb(37, 118, 152) 0 1px 30px;
+}
+
+#previous{
+    position: absolute;
+    top:88%;
+    right: 12%;
+    width: 10%;
+    height: 10%;
+    font-size: large;
+    font-weight: bolder;
+    border-radius: 13px;
+    border-style: solid;
+    border-width: 4px;
+    border-color: rgb(0, 179, 255);
+    color: rgb(0, 179, 255);
+    transition: all .5s;
+}
+#previous:hover{
+    background-image: linear-gradient(92.88deg, #6cb2b6 9.16%, #4faab4 43.89%, #28a8b6 64.72%);
+    color: white;
+    cursor: pointer;
+    border-style: none;
+    box-shadow: rgb(37, 118, 152) 0 1px 30px;
+}
+
+#reset{
+    position: absolute;
+    top:88%;
+    left: 12%;
+    width: 10%;
+    height: 10%;
+    font-size: 15px;
+    font-weight: bolder;
+    border-radius: 13px;
+    border-style: solid;
+    border-width: 4px;
+    border-color: rgb(169, 0, 0);
+    color: rgb(169, 0, 0);
+    transition: all .5s;
+}
+#reset:hover{
+    background-image: linear-gradient(92.88deg, #b03333 9.16%, #b72828 43.89%, #8c0000 64.72%);
+    color: white;
+    cursor: pointer;
+    border-style: none;
+    box-shadow: rgb(154, 66, 66) 0 1px 30px;
+}
+
+
+.show{
+    display: block;
+}
+.s_no{
+   display: none;
+}
+
+
+
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+  @media(max-width:2300px){
+    .randSeedTit,.binarTit{
+        font-size: 30px;
+    }
+  }
+
+
+  @media(max-width:1577px){
+    .randSeedTit,.binarTit{
+        font-size: 20px;
+        margin-top: -6%;
+        width: 60%;
+    }
+  }
+
+
+  @media(max-width:1840px){
+    .binarTit {width:80% ;}
+    .randValue{margin-left: 8%;width: 50%;}
+  }
+
+  @media(max-width:640px){
+    .binarTit{
+        width: 80%;
+        font-size: 18px;
+    }
+    .binar{
+        width: 50%;
+    }
+    .randDescr,.binLabel{
+        font-size: 15px;
+    
+    }
+    .randValue{
+        width: 40%;
+    }
+  }
+
+  @media(max-width:1732px){
+    #next,#previous,#reset{
+        width: 11%;
+        height: 8%;
+        top: 91%;
+        font-size: 11px;
+    }
+    #reset{width:15%; left: 17%;}
+    #dataset_submit{
+        width: 40%;
+        height: 8%;
+        right: 25%;
+        top: 91%;
+        font-size: 11px;
+    }
+    .preFTitle,.testSpTitle,.valSTitle,.upTitle{
+        width: 35%;
+        font-size: 30px;
+        top: -12%;
+        left: 1.5%;
+    }
+    .valSTitle,.upTitle{
+        width: 50%;
+    }
+  }
+
+
+  /* loading animation */
+  .lds-ripple {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+  }
+  .lds-ripple div {
+    position: absolute;
+    border: 4px solid rgb(48, 203, 255);
+    opacity: 1;
+    border-radius: 50%;
+    animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+  }
+  .lds-ripple div:nth-child(2) {
+    animation-delay: -0.5s;
+  }
+  @keyframes lds-ripple {
+    0% {
+      top: 36px;
+      left: 36px;
+      width: 0;
+      height: 0;
+      opacity: 0;
+    }
+    4.9% {
+      top: 36px;
+      left: 36px;
+      width: 0;
+      height: 0;
+      opacity: 0;
+    }
+    5% {
+      top: 36px;
+      left: 36px;
+      width: 0;
+      height: 0;
+      opacity: 1;
+    }
+    100% {
+      top: 0px;
+      left: 0px;
+      width: 72px;
+      height: 72px;
+      opacity: 0;
+    }
+  }
+  

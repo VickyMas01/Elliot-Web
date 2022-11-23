@@ -1,0 +1,153 @@
+.hier_randSeed{
+    position:absolute;
+    top: 40%;
+    left: 3%;
+    width: 40%;
+    height: 25%;
+    border-style: solid;
+    border-color: rgb(198, 198, 198);
+    border-width: 4px;
+    border-radius: 5px;
+    animation: fadeIn 1s;
+}
+.rndSeedTitHier{
+    position: relative;
+    margin-top: -6.5%;
+    margin-left: 3% ;
+    background-color: white;
+    width: 55%;
+    text-align: center;
+    font-size: 40px;
+    color: rgb(0, 179, 255);
+}
+.randDescrHier{
+    position: relative;
+    margin-left: 22px;
+    font-weight: 20px;
+    color: rgb(60, 70, 75);
+}
+.randSeedHier{
+    position: relative;
+    margin-left: 25%;
+    border-width: 2px;
+    border-radius: 3px;
+    border-style: solid;
+    border-color: rgb(198, 198, 198);
+    font-size: large;
+    font-weight: bold;
+    color:rgb(60, 70, 75) ;
+    text-align: center;
+}
+.fileInWrapper{
+    position: absolute;
+    top: 40%;
+    right: 3%;
+    width: 40%;
+    height: 25%;
+    border-style: solid;
+    border-color: rgb(198, 198, 198);
+    border-width: 4px;
+    border-radius: 5px;
+    animation: fadeIn 1s;
+}
+
+.descrHier{
+    text-align: center;
+    font-size: 20px;
+    font-weight: 20px;
+    color: rgb(60, 70, 75);
+}
+
+#disclaimerHi{
+    position: relative;
+    top:400px;
+    left: 80%;
+    color:#8c0000;
+    font-weight: bolder;
+}
+
+.hierFile{
+    width: 50%;
+    height: 15%;
+    position: relative;
+    top: 20px;
+    left: 25%;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: rgb(198, 198, 198);
+}
+.hierFile:required{
+    border-color:rgb(151, 4, 4);
+}
+
+.hier_submit{
+    position: absolute;
+    top:88%;
+    right: 3%;
+    width: 30%;
+    height: 10%;
+    font-size: large;
+    font-weight: bolder;
+    border-radius: 13px;
+    border-style: solid;
+    border-width: 4px;
+    border-color: rgb(13, 180, 44);
+    color: rgb(13, 180, 44);
+    transition: all .5s;
+}
+.hier_submit:hover{
+    background-image: linear-gradient(92.88deg, rgb(75, 186, 96) 9.16%, rgb(48, 184, 73) 43.89%, rgb(2, 161, 31)64.72%);
+    color: white;
+    cursor: pointer;
+    border-style: none;
+    box-shadow: rgb(54, 118, 59) 0 1px 30px;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+
+  @media(max-width:2300px){
+    .rndSeedTitHier{
+        font-size: 30px;
+    }
+  }
+
+
+  @media(max-width:1577px){
+    .rndSeedTitHier{
+        font-size: 20px;
+        margin-top: -5.5%;
+        width: 60%;
+    }
+  }
+
+
+  @media(max-width:1840px){
+    .randSeedHier{margin-left: 8%;width: 50%;}
+  }
+
+  @media(max-width:640px){
+    
+    .fileInWrapper{
+        width: 50%;
+    }
+    .randDescrHier,.descrHier{
+        font-size: 15px;
+    
+    }
+    .randSeedHier{
+        width: 40%;
+    }
+  }
+
+  @media(max-width:1732px){
+    #hierarchy_button{
+        width: 35%;
+        height: 8%;
+        top: 91%;
+        font-size: 11px;
+    }
+  }
