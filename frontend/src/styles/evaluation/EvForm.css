@@ -121,6 +121,11 @@
     border-style: solid;
     border-color: #6cb2b6;
 }
+
+.sendFile:invalid{
+    border-color: #8c0000;
+}
+
 #tresh_label{
     left:27%;
 }
@@ -130,10 +135,10 @@
 
 #evNext{
     position: absolute;
-    top:77%;
+    top:55.5%;
     right: 23%;
     width: 7%;
-    height: 7%;
+    height: 5%;
     font-size: large;
     font-weight: bolder;
     border-radius: 13px;
@@ -152,10 +157,10 @@
 }
 #evPrev{
     position: absolute;
-    top:77%;
+    top:55.5%;
     right: 31%;
     width: 7%;
-    height: 7%;
+    height: 5%;
     font-size: large;
     font-weight: bolder;
     border-radius: 13px;
@@ -174,10 +179,10 @@
 }
 #evReset{
     position: absolute;
-    top:77%;
+    top:55.5%;
     left: 16%;
-    width: 8%;
-    height: 7%;
+    width: 7%;
+    height: 5%;
     font-size: 15px;
     font-weight: bolder;
     border-radius: 13px;
@@ -197,10 +202,10 @@
 
 #evFormSubmit{
     position: absolute;
-    top:77%;
+    top:55.5%;
     left: 40%;
     width: 15%;
-    height: 7%;
+    height: 5%;
     font-size: large;
     font-weight: bolder;
     border-radius: 13px;
@@ -218,7 +223,14 @@
     box-shadow: rgb(99, 218, 121) 0 1px 30px;
 }
 
-
+#evSubmitError{
+    position: relative;
+    color: #8c0000;
+    font-size: large;
+    font-weight: bolder;
+    top: -2.5%;
+    left: 37.5%;
+}
 
 
 
@@ -227,7 +239,7 @@
     #evNext,#evPrev,#evReset,#evFormSubmit{
         width: 6%;
         height: 5%;
-        top: 79%;
+        top: 56%;
         font-size: 11px;
         right: 15% ;
     }

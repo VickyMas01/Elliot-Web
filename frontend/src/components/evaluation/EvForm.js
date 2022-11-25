@@ -41,7 +41,7 @@ function EvForm(){
                 body: new FormData(form)
             }).then(res => res.json())
             .then(data => {
-                document.getElementById('evDownloadDF').setAttribute('href', `/api/v1/recommendationmodel/download/${data}`);
+                document.getElementById('evDownloadDF').setAttribute('href', `/api/v1/evaluation/download`);
                 document.getElementById('evLoading').setAttribute('hidden', true);
                 document.getElementById('evResult').setAttribute('hidden',false);
             });
@@ -65,15 +65,15 @@ function EvForm(){
             <div className={evStep===0?'evFileInput':'showNo'}>
                 <div className='fileCard'>
                     <span className='fileTit'>Train</span>
-                    <input type='file' name="train_dataset" id="train_dataset" className="sendFile" />
+                    <input type='file' name="train_dataset" id="train_dataset" className="sendFile" required/>
                 </div>
                 <div className='fileCard'>
                     <span className='fileTit'>Test</span>
-                    <input type='file' name="test_dataset" id="test_dataset" className="sendFile" />
+                    <input type='file' name="test_dataset" id="test_dataset" className="sendFile" required/>
                 </div>
                 <div className='fileCard'>
                     <span className='fileTit'>Recs</span>
-                    <input type='file' name="recs_dataset" id="recs_dataset" className="sendFile" />
+                    <input type='file' name="recs_dataset" id="recs_dataset" className="sendFile" required/>
                 </div>
             </div>
 
@@ -114,11 +114,11 @@ function EvForm(){
 
             <div id='evLoading' hidden>
               <div className="lds-ripple"><div></div><div></div></div>
-                <span className='load_info'> Data preprocessing in progress</span>
+                <span className='load_info'> Data processing in progress</span>
             </div> 
                                 
            <div id='evResult' hidden>
-             <h1 className='completedTit'>Preprocessing completed</h1>
+             <h1 className='completedTit'>Processing completed</h1>
               <p className='compl_content'>Your dataset has been successfully processed!
                  <a href='' className="download_link" id="evDownloadDF">Download ZIP</a>
               </p>

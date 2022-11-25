@@ -10,14 +10,9 @@ function FixedForm(props){
     const[dataRec, setDataRec]=useState(defaultRec);
 
     useEffect(()=>{
-        document.getElementById('next').addEventListener('click',()=>{
-            props.setStep(props.step+1);
-        });
         if(props.step >0){
           document.getElementById('previous').style='display:block';
-        document.getElementById('previous').addEventListener('click',()=>{
-          props.setStep(props.step-1);
-        })};
+        }
 
         if(props.step<1){
           document.getElementById('next').style='display:block';
@@ -26,19 +21,21 @@ function FixedForm(props){
           document.getElementById('dataset_submit').style='display:block'; 
           document.getElementById('next').style='visibility:hidden'    //inserire azione da far svolgere al submit
         }
+      },[props.step]);
 
-          document.getElementById('reset').addEventListener('click',()=>{
-            setDataRec(defaultRec);
-            props.setStep(0);
-          });
-
+      const next=()=>{
+        props.setStep(props.step+1);
+      }
+      const previous=()=>{
+        props.setStep(props.step-1);
+      }
+      const reset=()=>{
+        setDataRec(defaultRec);
+        props.setStep(0);
+      }
+      
+      const fixedSubmit=()=>{
           let form=document.getElementById('form_data');
-          form.addEventListener('change',()=>{
-           if(form.checkValidity()){
-             form.classList.add('valid')
-           }});
- 
-           document.getElementById('dataset_submit').addEventListener('click', ()=>{
              if(form.checkValidity()){
                document.getElementsByClassName('navButt').style.display='none';
                fetch('/api/v1/preprocessing-json', {
@@ -53,9 +50,8 @@ function FixedForm(props){
              document.getElementById('loadingFix').setAttribute('hidden', false);
          
              }else document.getElementById('disclaimerFix').innerHTML='Go back and fill required fields';
-           })
+           }
         
-    });
         
 
     return(
@@ -108,10 +104,10 @@ function FixedForm(props){
                 </p>
                </div>
 
-           <button id='next' className='navButt' hidden>Next</button>
-           <button id='reset' className='navButt'>Reset input parameters</button>
-           <button id='previous' className='navButt' hidden>Previous</button>
-           <input type='submit' id='dataset_submit' value='Preprocess with Fixed strategy' className='navButt' hidden />
+           <button id='next' className='navButt' onClick={next} hidden>Next</button>
+           <button id='reset' className='navButt' onClick={reset}>Reset input parameters</button>
+           <button id='previous' className='navButt' onClick={previous} hidden>Previous</button>
+           <input type='submit' id='dataset_submit' value='Preprocess with Fixed strategy' className='navButt' onClick={fixedSubmit} hidden />
         </div>
     );
 }

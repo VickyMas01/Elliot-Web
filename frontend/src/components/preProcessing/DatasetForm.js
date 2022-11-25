@@ -63,40 +63,37 @@ function DatasetForm(props){
     const [paramData,setParamData]=useState(defaultParamState);
     const [valueData,setValueData]=useState(defaultValueState);
 
-
-
-    useEffect(()=>{
-        document.getElementById('next').addEventListener('click',()=>{
+        const next=()=>{
             props.setStep(props.step+1);
-        });
+        }
+        
+        const previous=()=>{
+          props.setStep(props.step-1);
+        }
+
+      useEffect(()=>{
         if(props.step >0){
           document.getElementById('previous').style='display:block';
-        document.getElementById('previous').addEventListener('click',()=>{
-          props.setStep(props.step-1);
-        })}else document.getElementById('previous').style='display:none';
+        }else document.getElementById('previous').style='display:none';
 
         if(props.step<4){
           document.getElementById('next').style='display:block';
           document.getElementById('dataset_submit').style='display:none'; 
         }else{
           document.getElementById('dataset_submit').style='display:block'; 
-          document.getElementById('next').style='visibility:hidden';    //inserire azione da far svolgere al submit
+          document.getElementById('next').style='visibility:hidden';   
         }
+      },[props.step]);
 
-          document.getElementById('reset').addEventListener('click',()=>{
+          const reset=()=>{
             setCheckData(defaultCheckState);
             setValueData(defaultValueState);
             setParamData(defaultParamState);
             props.setStep(0);
-          });
+          }
         
+        const datasetSubmit=()=>{
          let form=document.getElementById('form_data');
-         form.addEventListener('change',()=>{
-          if(form.checkValidity()){
-            form.classList.add('valid')
-          }});
-
-          document.getElementById('dataset_submit').addEventListener('click', ()=>{
             if(form.checkValidity()){
               document.getElementsByClassName('navButt').style.display='none';
               fetch('/api/v1/preprocessing-json', {
@@ -111,15 +108,14 @@ function DatasetForm(props){
             document.getElementById('loading').setAttribute('hidden', false);
         
             }else document.getElementById('disclaimer').innerHTML='Go back and fill required fields';
-          })
+          }
 
-         });
 
     return(
         <div className='datSet_container'>
           <div className='pbar'><Progressbar step={props.step} initStyle='twenty%'/></div>
            <form action="" method="POST" encType="multipart/form-data" id="form_data">
-            <input type='text' name='loading_strategy' id='loading_strategy' value={props.strategy} hidden/>
+            <input type='text' name='loading_strategy' id='loading_strategy' value={props.strategy} readOnly hidden/>
 
                               <div id='step1' className={props.step===0?'show':'s_no'}>
                                  <div className='randSeed'><h2 className='randSeedTit'>Random seed</h2>
@@ -172,10 +168,10 @@ function DatasetForm(props){
                                   </p>
                                 </div>
 
-           <button id='next' className='navButt' hidden>Next</button>
-           <button id='reset' className='navButt'>Reset input parameters</button>
-           <button id='previous' className='navButt' hidden>Previous</button>
-           <input type='submit' id='dataset_submit' value='Preprocess with Dataset strategy' className='navButt' hidden />
+           <button id='next' className='navButt' onClick={next} hidden>Next</button>
+           <button id='reset' className='navButt' onClick={reset}>Reset input parameters</button>
+           <button id='previous' className='navButt' onClick={previous} hidden>Previous</button>
+           <input type='submit' id='dataset_submit' value='Preprocess with Dataset strategy' className='navButt' onClick={datasetSubmit} hidden />
 
         </div>
     );

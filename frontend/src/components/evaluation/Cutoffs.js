@@ -1,18 +1,9 @@
-import React,{useEffect,useState} from 'react';
+import React from 'react';
 import '../../styles/evaluation/Cutoffs.css'
 
 function Cutoffs(){
-    const[check,setCheck]=useState(false);
-    useEffect(()=>{
     
-        document.getElementById('cutoffs').addEventListener('change',(event)=>{if(event.target.checked){
-         document.getElementById('enSection').className='enable';
-         setCheck(true);
-        }else{document.getElementById('enSection').className='noEnable'
-           setCheck(false);} 
-        });
-
-        document.getElementById('cutoffAdd').addEventListener('click',(event)=>{
+        const cutoffAdd=(event)=>{
             let nCutoffs=document.getElementById('n_k').value;
           if(nCutoffs>0){
             const box= document.getElementById('cutoffField');
@@ -31,24 +22,23 @@ function Cutoffs(){
                 box.appendChild(space);
             }
           }
-        });
+        }
 
-        document.getElementById('cutoffReset').addEventListener('click',()=>{
+        const cutoffReset=()=>{
             const box=document.getElementById('cutoffField');
             while(box.firstChild){box.removeChild(box.lastChild)};
             document.getElementById('n_k').value='';
-        });
-    });
+        }
+
 
     return(
         <>
-         <label forhtml='cutoffs' id='cutoffsLabel' className='cutCheckLabel'>Use cutoffs</label>
-            <input type='checkbox' id='cutoffs' value='cutoffs' />
-          <div id='enSection' className='noEnable'>
+         <span id='cutoffsLabel' className='cutCheckLabel'>Use cutoffs</span>
+          <div id='enSection' className='enable'>
             <input type='number' id='n_k' name='n_k' min='1' placeholder='Input number of cutoffs'
-               required={check?true:false} className='nInput'/>
-            <button id='cutoffAdd' className='cutoffButton'>Add fields</button>
-            <button id='cutoffReset' className='cutoffButton'>Reset fields</button>
+               required className='nInput'/>
+            <button id='cutoffAdd' className='cutoffButton' onClick={cutoffAdd}>Add field</button>
+            <button id='cutoffReset' className='cutoffButton' onClick={cutoffReset}>Reset fields</button>
             <div id='cutoffField' className='cutoffsEnabled'>
 
             </div>          

@@ -140,6 +140,9 @@
 .clustCheck:hover{
     cursor: pointer;
 }
+.checkComplex:hover{
+    cursor: pointer;
+}
 
 
 @media(max-width: 1545px){

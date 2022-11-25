@@ -152,11 +152,12 @@
 
 
 #disclaimerFix{
-    position: relative;
+    position: absolute;
     width: 40%;
     color: #8c0000;
     font-weight: bolder;
-    left: 70%;
+    left: 41%;
+    top: 84%;
 }
 
 

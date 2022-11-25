@@ -162,11 +162,11 @@ input[type=file]::file-selector-button:hover{
 
 #disclaimer{
     position: relative;
-    left: 35%;
+    left: 42%;
     width: 40%;
     color: #8c0000;
     font-weight: bolder;
-    top: 420px;
+    top: 84%;
 }
 
 #dataset_submit{

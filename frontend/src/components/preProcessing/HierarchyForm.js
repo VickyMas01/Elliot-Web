@@ -5,15 +5,9 @@ function HierarchyForm(props){
 
   const[seed,setSeed]=useState(42);
 
-    useEffect(()=>{
-
-      let form=document.getElementById('form_data');
-      form.addEventListener('change',()=>{
-       if(form.checkValidity()){
-         form.classList.add('valid')
-       }});
-
-       document.getElementById('hierarchy_button').addEventListener('click', ()=>{
+  
+  const hierarchySubmit=()=>{
+        let form=document.getElementById('form_data');
          if(form.checkValidity()){
            document.getElementsById('hierarchy_button').style.display='none';
            fetch('/api/v1/preprocessing-json', {
@@ -28,9 +22,8 @@ function HierarchyForm(props){
          document.getElementById('loadingHi').setAttribute('hidden', false);
      
          }else document.getElementById('disclaimerHi').innerHTML='Fill required fields';
-       })
+       }
 
-    });
 
     return(
         <div className='hier_container'>
@@ -47,7 +40,7 @@ function HierarchyForm(props){
                  <h2 className='descrHier'>Input files of a root folder (in .zip) for a hierarchy strategy</h2>
                  <input type='file'name="dataset_folder" id="dataset_folder" className="hierFile" accept=".zip" required/>
                </div>
-               <input type='submit'  value="Pre-process with hierarchy strategy" id="hierarchy_button" className="hier_submit" />
+               <input type='submit'  value="Pre-process with hierarchy strategy" id="hierarchy_button" className="hier_submit" onClick={hierarchySubmit}/>
             </form>
 
             <span id='disclaimerHi'></span>

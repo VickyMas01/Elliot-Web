@@ -15,15 +15,14 @@ function ComplexMetrics(){
     }
     const[fairCheck,setFairCheck]=useState(defaultFairCheck);
 
-    useEffect(()=>{
       
-      document.getElementById('DSC').addEventListener('change',(event)=>{
+      const showBetaField=(event)=>{
         if(event.target.checked){
           document.getElementById('beta').className='betaInput';
           document.getElementById('beta').required=true;
         }else document.getElementById('beta').className='optHidden';
-      })
-    });
+      }
+  
     return(
         <>
         <span className='titSect'>Complex Metrics</span>
@@ -31,7 +30,7 @@ function ComplexMetrics(){
         <div className='metricOption'>
             <span className='metricTit'>Accuracy</span>
             <div className='optShow'>
-              <input type="checkbox"  name="complex_metrics" id="DSC" value="DSC"/>DSC
+              <input type="checkbox"  name="complex_metrics" id="DSC" value="DSC" onChange={showBetaField} className='checkComplex'/>DSC
               <input type="number" name="beta" id="beta" placeholder="input a value for beta (es:1)" className='optHidden'/>
               <br/>
               <input type="checkbox"  name="complex_metrics" id="" value=""/>ExtendedF1
@@ -40,8 +39,8 @@ function ComplexMetrics(){
         <div className='metricOption'>
             <span className='metricTit'>Bias</span>
             <div className='optShow'>
-              <input type="checkbox"  name="complex_metrics" id="ExtendedPopREO" value="ExtendedPopreo" />Extended PopREO<br/>
-              <input type="checkbox"  name="complex_metrics" id="ExtendedPopRSP" value="ExtendendPoprsp" />ExtendedPopRSP
+              <input type="checkbox"  name="complex_metrics" id="ExtendedPopREO" value="ExtendedPopreo" className='checkComplex'/>Extended PopREO<br/>
+              <input type="checkbox"  name="complex_metrics" id="ExtendedPopRSP" value="ExtendendPoprsp" className='checkComplex'/>ExtendedPopRSP
             </div>
         </div>
         <div id='fairSection' className='metricOption'>
@@ -167,8 +166,8 @@ function ComplexMetrics(){
         <div id='complNovelty' className='metricOption'>
             <span className='metricTit'>Novelty</span>
             <div className='optShow'>
-              <input type="checkbox"  name="complex_metrics" id="ExtendedEFD" value="ExtendedEFD"/>ExtendedEFD<br/>
-              <input type="checkbox"  name="complex_metrics" id="ExtendedEPC" value="ExtendedEPC"/>ExtendedEPC
+              <input type="checkbox"  name="complex_metrics" id="ExtendedEFD" value="ExtendedEFD" className='checkComplex'/>ExtendedEFD<br/>
+              <input type="checkbox"  name="complex_metrics" id="ExtendedEPC" value="ExtendedEPC" className='checkComplex'/>ExtendedEPC
             </div>
         </div>
       </div>

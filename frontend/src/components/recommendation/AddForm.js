@@ -1,16 +1,105 @@
-import React from 'react';
+import React,{useState} from 'react';
+import Models from  '../../json/models2.json';
+import '../../styles/recommendation/AddForm.css'
 
-function AddForm(props){
-    return(
-        <div className='formContent'>
+function AddForm(){
+
+    const[moduleOptions,setModuleOptions]=useState([]);
+    const[moduleParameters,setModuleParameters]=useState([]);
+    const[kChecked,setkChecked]=useState(false);
+
+    const setModuleTypes=(event)=>{
+        let options=[];
+        let selected=event.target.value;
+        Models.map(element=>{
+            if(element.id===selected){
+                options=element.models;
+            }
+            return console.log(options);
+        })
+        setModuleOptions(options);
+    }
+    
+    const setTypeParameters=(event)=>{
+        let parameters=[];
+        let type=event.target.value;
+        moduleOptions.map(option=>{
+            if(option.id===type){
+                parameters=option.parameters;
+            }
+            return console.log(parameters)
+        })
+        setModuleParameters(parameters);
+    }
+
+    return(<>
             <div className='modelSelect'>
-                <label for="loading_rec_model">Select Recommendation Model</label>
-                <select name="loading_rec_model" id="loading_rec_model" class="form-control" required>
-                    <option value='null' selected disabled>--- Select one ---</option>
-                    {/* capire come richiamare l'API per i modelli, o importare i json affidando questa parte al frontend */}
+                <label forhtml="loading_rec_model" className='modSect'>Select Recommendation Model</label>
+                <select name="loading_rec_model" id="loading_rec_model" className="form-control" onChange={setModuleTypes} required>
+                    <option value='null' >--- Select one ---</option>
+                    {Models.map(model =>{
+                        return(<option key={model.id} value={model.id}>{model.id}</option>);
+                    })}
+                </select>
+                <select name="loading_model" id="loading_model" className="form-control" onChange={setTypeParameters} required>
+                    <option value='null' >--- Select one ---</option>
+                        {moduleOptions.map(option=>{
+                            return(<option key={option.id} value={option.id}>{option.name}</option>);
+                        })
+                       }
                 </select>
             </div>
-        </div>
+
+            <div className='fileInputSect'>
+                <div className='fileSpace'>
+                    <span className='spanFile'>Test file</span>
+                    <input type='file' id="test_file" name="test_file" className="formFileIn" required />
+                </div>
+                <div className='fileSpace'>
+                    <span className='spanFile'>Train file</span>
+                    <input type='file' id="train_file" name="train_file" className="formFileIn" required />
+                </div>
+            </div>
+
+            <div className='topKSect'>
+                <input type='checkbox' id='topKcheck' name='topKcheck' className='checkInput' onChange={(event)=>{if(event.target.checked){setkChecked(true)}else setkChecked(false)}}/>Top K
+                <input type='text' id='top_k' name='top_k' placeholder='Input top k value' className={kChecked?'textK':'hide'} required={kChecked?true:false}/>
+            </div>
+            
+            <div className={moduleParameters.length > 0?'parametersSect':'hide'}>
+              <h2>Parameters</h2>
+                {moduleParameters.map((value,index)=>{
+                    return(<>
+                    <div className='parameterCard'>
+                      <label forhtml={value} className='paramLabel'>{value}</label>
+                      <input type='text' key={index} id={value} name={value} className='textK' /><br/>
+                    </div>
+                    </>
+                    );
+                })}
+            </div>
+
+            <div className='metaParamSect'>
+                <input type='checkbox' id='save_weights' name='save_weights' className='checkInput' />Save weights<br/>
+                <div className='parameterCard'>
+                    <label forhtml='validation_metric' className='tInLab'>Validation metric</label>
+                    <input type='text' id='validation_metric' name='validation_metric' palceholder='Input a value for validation metric' className='textInput' />
+                </div>
+                <div className='parameterCard'>
+                    <label forhtml='validation_rate' className='tInLab'>Validation Rate</label>
+                    <input type='number' id='validation_rate' name='validation_rate' palceholder='Input a value for validation rate' className='textInput' />
+                </div>
+                <div className='parameterCard'>
+                    <label forhtml='hyper_opt_alg' className='tInLab'>Hyper opt alg</label>
+                    <input type='text' id='hyper_opt_alg' name='hyper_opt_alg' palceholder='Input a value for hyper opt alg' className='textInput' />
+                </div>
+                <div className='parameterCard'>
+                    <label forhtml='hyper_max_evals' className='tInLab'>Hyper max evals</label>
+                    <input type='text' id='hyper_max_evals' name='hyper_max_evals' palceholder='Input a value for hyper max evals' className='textInput' />
+                </div>
+            </div>
+       </>   
+        
     );
 }
 

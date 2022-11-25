@@ -15,9 +15,9 @@ import os
 
 app = Flask(__name__)
 
-@app.route("/")  # decoratore che specifica quale percorso poi richiama la def homepage
-def homepage():
-    return render_template("index.html")
+# @app.route("/")  # decoratore che specifica quale percorso poi richiama la def homepage
+# def homepage():
+#     return render_template("index.html") ==>#non necessario con frontend react
 
 @app.route("/contatti")  # decoratore che specifica quale percorso poi richiama la def contatti
 def contatti():
@@ -28,9 +28,9 @@ def contatti():
 # API usata per il preprocessing del dataset con una richiesta sincrona
 # TODO implementare selezione da frontend tra richiesta sincrona/asincrona a seconda delle necessit dell'utente
 
-@app.route("/evaluation")
-def evaluation():
-    return render_template("evaluation.html")
+# @app.route("/evaluation")
+# def evaluation():
+#     return render_template("evaluation.html") ==>#non necessario con frontend react
 
 @app.route("/api/v1/preprocessing", methods=['GET', 'POST'])
 def preprocess():
@@ -90,10 +90,10 @@ def send_results(request_no):
 with open("static/js/models2.json") as f:
     file = json.load(f)
 
-@app.route("/recommendation")
-def home():
-    res=file
-    return render_template("test.html", data=res)
+#@app.route("/recommendation")
+#def home():
+#    res=file
+#    return render_template("test.html", data=res) ==>#non necessario con frontend react
     #return render_template("test.html")
 
 #test send form data tonio
@@ -133,30 +133,30 @@ def send_results_model(request_no):
     return response
 
 #fill second select
-@app.route("/getDataAjax",methods=['GET','POST'])
-def getDataAjax():
-    res=[]
-    if request.method=='POST':
-        for el in file:
-            if el["id"]==request.form['data']:
-                res=el["models"]
-                break
-    return render_template("get_data_ajax.html",data=res)
+# @app.route("/getDataAjax",methods=['GET','POST'])
+# def getDataAjax():
+#     res=[]
+#     if request.method=='POST':
+#         for el in file:
+#             if el["id"]==request.form['data']:
+#                 res=el["models"]
+#                 break
+#     return render_template("get_data_ajax.html",data=res)  ==>#non necessario con frontend react
 
 #display parameters
-@app.route("/getParametersAjax",methods=['GET','POST'])
-def getParametersAjax():
-    res=[]
-    if request.method=='POST':
-        #i=int(0)
-        for el in file:
-            i = int(0)
-            for i in range(len(el["models"])):
-                if el["models"][i]["id"]==request.form['data']:
-                    res=el["models"][i]["parameters"]
-                    break
-                i+=1
-    return render_template("get_parameters_ajax.html",data=res)
+ #@app.route("/getParametersAjax",methods=['GET','POST'])
+ #def getParametersAjax():
+#   res=[]
+ #    if request.method=='POST':
+  #       #i=int(0)
+   #      for el in file:
+    #         i = int(0)
+     #        for i in range(len(el["models"])):
+      #           if el["models"][i]["id"]==request.form['data']:
+       #              res=el["models"][i]["parameters"]
+        #             break
+         #        i+=1
+#    return render_template("get_parameters_ajax.html",data=res)  #==>#non necessario con frontend react
 
 
 if __name__ == '__main__':

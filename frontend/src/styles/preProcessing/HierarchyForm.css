@@ -59,9 +59,9 @@
 }
 
 #disclaimerHi{
-    position: relative;
-    top:400px;
-    left: 80%;
+    position: absolute;
+    top:84%;
+    left: 77%;
     color:#8c0000;
     font-weight: bolder;
 }

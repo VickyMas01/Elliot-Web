@@ -1,0 +1,108 @@
+.hide{display: none;}
+
+.modelSelect{
+    position: relative;
+    top:-60px;
+    left: 2%;
+    width: 80%;
+    height: 95px;
+    border-style: solid;
+    border-radius: 20px;
+    border-width: 2px;
+    border-color: grey;
+}
+.modSect{
+    font-size: larger;
+    font-weight: bolder;
+    margin-left: 10px;
+}
+.form-control{
+    margin-top: 5px;
+    border-radius: 5px ;
+}
+.form-control:required{
+    border-color: #8c0000;
+}
+
+.fileInputSect{
+    position: relative;
+    left: 2%;
+    top:-50px;
+    border-style: solid;
+    border-radius: 20px;
+    border-width: 2px;
+    border-color: grey;
+    width: 80%;
+    height: 90px;
+    font-size: larger;
+    font-weight: bolder;
+}
+.spanFile{
+    position: relative;
+    top:13px;
+    left: 12%;
+    width:30%;
+}
+.formFileIn{
+    position: relative;
+    margin-right:30px;
+    border-style: solid;
+    border-color: grey;
+    margin-bottom: 10px;
+}
+.formFileIn:invalid{
+    border-color: #8c0000;
+}
+
+.topKSect{
+    position: relative;
+    top:-40px;
+    left:17%;
+    width: 50%;
+    height: auto;
+    border-style: solid;
+    border-color: grey;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-size: larger;
+    font-weight: bolder;
+}
+
+.metaParamSect{
+    position: relative;
+    top:-4%;
+    left: 2%;
+    width: 90%;
+    border-style: solid;
+    border-color: grey;
+    border-width: 2px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-size: larger;
+    font-weight: bolder;
+}
+
+.parametersSect{
+    position: relative;
+    left: 2%;
+    top:-40px;
+    width: 90%;
+    max-height:300px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: grey;
+    border-radius: 5px;
+    font-size: larger;
+    font-weight: 900;
+}
+
+.paramLabel{
+    margin: 10px;
+}
+
+.tInLab,
+.textInput{margin-left: 10px;}
+
+.checkInput:hover{
+    cursor:pointer;
+}
